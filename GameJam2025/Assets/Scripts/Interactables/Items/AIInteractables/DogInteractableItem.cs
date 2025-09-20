@@ -36,6 +36,7 @@ public class DogInteractableItem : InteractableItemBase
     private void FinishedDogPuzzle()
     {
         animatorComponent.SetTrigger("Sit");
+        PlayerEvents.OnPlayerEndedDogAction?.Invoke();
     }
 
     private IEnumerator IE_WaitUntillNoMoreMovement()
