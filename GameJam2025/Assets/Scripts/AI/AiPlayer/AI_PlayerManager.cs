@@ -6,8 +6,10 @@ using UnityEngine;
 public class AI_PlayerManager : MonoBehaviour
 {
     [SerializeField] private AI_PlayerMovement movement;
+    [SerializeField] private Ai_PlayerAnimatorController animatorController;
     [SerializeField] private List<TriggerLayerDetector> triggersLayerDetector;
     [SerializeField] private float timeToWaitToMoveAgainAfterCollidingWithPlayer = 1f;
+    [SerializeField] private string startWithSpecificAnimation = "";
     private bool collidingWithPlayer = false;
     private bool blockMovement = false;
     private Coroutine stopCollidingWithPlayerCoroutine = null;
@@ -23,6 +25,9 @@ public class AI_PlayerManager : MonoBehaviour
             triggersLayerDetector[i].OnEnter += OnEnteredPlayerLayer;
             triggersLayerDetector[i].OnExit += OnExitPlayerLayer;
         }
+
+        if (string.IsNullOrEmpty(startWithSpecificAnimation) == false)
+            animatorController?.StartSpecificAnimation(startWithSpecificAnimation);
     }
 
     private void OnDestroy()
@@ -46,8 +51,12 @@ public class AI_PlayerManager : MonoBehaviour
             stopCollidingWithPlayerCoroutine = null;
         }
 
+        if(movement.HasTarget)
+            animatorController?.StartIdleAnimation();
+
         collidingWithPlayer = true;
         movement.StopMovement();
+
     }
 
     private void OnExitPlayerLayer(Collider collider)
@@ -65,11 +74,13 @@ public class AI_PlayerManager : MonoBehaviour
         if (collidingWithPlayer || blockMovement)
             return;
 
+        animatorController?.StartWalkingAnimation();
         movement.MoveTo(targetPosition, speed);
     }
 
     public void NoMoreTargets()
     {
+        animatorController?.StartIdleAnimation();
         movement.NoMoreTargets();
     }
 
