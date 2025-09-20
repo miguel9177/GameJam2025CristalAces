@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: DogSeemsHungry
   m_EditorClassIdentifier: 
   lines:
-  - MMMMM......
   - This Dog Seems Hungry
   icon: {fileID: 21300000, guid: e7fddea131a3f634697a828e2bd73ad3, type: 3}

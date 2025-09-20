@@ -2,14 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpeechManager : MonoBehaviour
 {
     public static SpeechManager Instance;
 
     [Header("UI")]
-    public TextMeshProUGUI speechText;
-    public GameObject speechPanel;
+    [SerializeField] TextMeshProUGUI speechText;
+    [SerializeField] GameObject speechPanel;
+    [SerializeField] Image image;
 
     private Queue<SpeechData> speechQueue = new Queue<SpeechData>();
     private string[] currentLines;
@@ -73,6 +75,7 @@ public class SpeechManager : MonoBehaviour
         SpeechData nextSpeech = speechQueue.Dequeue();
         currentLines = nextSpeech.Lines;
         currentLineIndex = 0;
+        image.sprite = nextSpeech.Icon;
 
         speechPanel.SetActive(true);
         isActive = true;
