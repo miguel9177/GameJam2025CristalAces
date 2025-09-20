@@ -1,47 +1,59 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class AI_PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
+    [SerializeField] private float maxSpeed = 3f;
     [SerializeField] private float rotationSpeed = 5f;
-    [SerializeField] private Vector3 target;
-    [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform feet;
+    [SerializeField] private Rigidbody rb;
 
+    private float acceleration = 3f;
+    private Vector3 targetPosition;
     private bool hasTarget = false;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
 
-    public void MoveTo(Vector3 targetTransform, float moveSpeed)
+    public void MoveTo(Vector3 newTarget, float moveSpeed)
     {
-        target = targetTransform;
-        speed = moveSpeed;
+        targetPosition = newTarget;
+        acceleration = moveSpeed;
         hasTarget = true;
+        MoveAI();
     }
 
     public bool ReachedTarget(float reachDistance)
     {
-        if (!hasTarget || target == null) return true;
-        return Vector3.Distance(feet.position, target) <= reachDistance;
+        if (!hasTarget) return true;
+        return Vector3.Distance(feet.position, targetPosition) <= reachDistance;
     }
 
-    private void FixedUpdate()
+    private void MoveAI()
     {
-        if (!hasTarget || target == null) return;
+        if (!hasTarget) return;
 
-        Vector3 direction = (target - rb.position).normalized;
+        Vector3 targetPos = new Vector3(targetPosition.x, rb.position.y, targetPosition.z);
+        Vector3 ourPos = rb.position;
+        Vector3 direction = (targetPos - ourPos).normalized;
 
-        // aplicar for�a para mover
-        rb.AddForce(direction * speed, ForceMode.Acceleration);
+        // aplicar força para andar em direção ao alvo
+        rb.AddForce(direction * acceleration, ForceMode.Acceleration);
 
-        // rodar suavemente para onde est� a andar
-        if (rb.linearVelocity.sqrMagnitude > 0.01f)
+        // limitar a velocidade máxima
+        Vector3 horizontalVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        if (horizontalVel.magnitude > maxSpeed)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z));
+            Vector3 limitedVel = horizontalVel.normalized * maxSpeed;
+            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+        }
+
+        // rodar suavemente para a direção do movimento real
+        if (horizontalVel.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(horizontalVel);
             rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime));
         }
     }

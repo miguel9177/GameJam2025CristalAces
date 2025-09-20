@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1 &334793436
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 5
-  speed: 3
+  speed: 10
 --- !u!1 &542241448
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
   - {fileID: 1224788426}
   - {fileID: 853022918}
   - {fileID: 518970299}
-  reachDistance: 0.2
+  reachDistance: 1.5
   loop: 1
 --- !u!1 &761233278
 GameObject:
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1 &1124418154
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1 &1224788424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1 &1626448978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1 &2008976988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  speed: 3
+  speed: 10
 --- !u!1001 &403149347939738400
 PrefabInstance:
   m_ObjectHideFlags: 0

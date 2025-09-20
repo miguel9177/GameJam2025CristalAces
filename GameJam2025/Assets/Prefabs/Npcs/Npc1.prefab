@@ -166,11 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873dda5087446a94bb495005d0c53bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  acceleration: 3
+  maxSpeed: 3.85
   rotationSpeed: 5
-  target: {x: 0, y: 0, z: 0}
-  rb: {fileID: 6581191485613745123}
   feet: {fileID: 8143155393527384910}
+  rb: {fileID: 6581191485613745123}
 --- !u!1 &3649353385266475883
 GameObject:
   m_ObjectHideFlags: 0

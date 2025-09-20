@@ -13,7 +13,7 @@ public class AI_CheckpointsController : MonoBehaviour
     private bool isMoving = true;
     private bool isWaiting = false;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!isMoving || isWaiting || ourCheckpoints.Count == 0) return;
 
