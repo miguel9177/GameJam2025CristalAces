@@ -8,6 +8,8 @@ public class InteractableItemBase : MonoBehaviour
     [SerializeField] private Collider myCollider;
     [SerializeField] private LayerMask interactableLayers;
 
+    public bool PlayerInsideTrigger => playerInsideTrigger;
+
     private void Start()
     {
         _Start();

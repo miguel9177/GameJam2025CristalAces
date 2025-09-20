@@ -190,6 +190,7 @@ MonoBehaviour:
   playerCamera: {fileID: 6456499975674342002}
   playerCanvasController: {fileID: 8542683623652841687}
   inventoryManager: {fileID: 6117889187816619039}
+  speechManager: {fileID: 7263885772694359834}
   defaultAimColor: {r: 1, g: 1, b: 1, a: 1}
   aimingAtInteractableColor: {r: 0, g: 1, b: 0.8264265, a: 1}
 --- !u!114 &4289488710492502419
@@ -477,6 +478,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0141a5230734cc4da6138c33107274b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7263885772694359834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9015614063009928870, guid: cbd7e2376bacda740b13d83c9394deec, type: 3}
+  m_PrefabInstance: {fileID: 1860941738849278396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e152122d9e3df0d4fb5789f83fe52894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8542683623652841687 stripped

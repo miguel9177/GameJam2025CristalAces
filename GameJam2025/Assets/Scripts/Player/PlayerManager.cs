@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] Camera playerCamera;
     [SerializeField] PlayerCanvasController playerCanvasController;
     [SerializeField] PlayerInventoryManager inventoryManager;
+    [SerializeField] SpeechManager speechManager;
 
     [Header("Data")]
     [SerializeField] private Color defaultAimColor;
@@ -14,6 +15,8 @@ public class PlayerManager : MonoBehaviour
 
     public Camera PlayerCamera => playerCamera;
     public PlayerInventoryManager InventoryManager => inventoryManager;
+    public SpeechManager SpeechManager => speechManager;
+
     private InteractableItemBase inteactableItem = null;
 
     private void Update()
