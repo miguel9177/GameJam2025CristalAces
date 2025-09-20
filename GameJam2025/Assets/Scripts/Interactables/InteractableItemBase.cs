@@ -7,6 +7,8 @@ public class InteractableItemBase : MonoBehaviour
 
     [SerializeField] private Collider myCollider;
     [SerializeField] private LayerMask interactableLayers;
+    [SerializeField] private AudioPlayer audioPlayer;
+    [SerializeField] private AudioData soundOnInteract;
 
     public bool PlayerInsideTrigger => playerInsideTrigger;
 
@@ -82,6 +84,8 @@ public class InteractableItemBase : MonoBehaviour
 
     protected virtual void Interact()
     {
+        if (audioPlayer != null && soundOnInteract)
+            audioPlayer.PlayAudio(soundOnInteract);
         Debug.Log($"{gameObject.name} foi interagido!");
     }
 }

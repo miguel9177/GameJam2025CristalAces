@@ -21,6 +21,7 @@ public class DogInteractableItem : InteractableItemBase
 
     protected override void Interact()
     {
+        base.Interact();
         if(!GameplayManager.Instance.Player.InventoryManager.HasItem(itemNecessaryToMoveOutDog))
         {
             Debug.Log("YOU DONNOT HAVE THE NECESSARY ITEMS");
