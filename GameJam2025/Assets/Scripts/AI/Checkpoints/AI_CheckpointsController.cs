@@ -55,6 +55,7 @@ public class AI_CheckpointsController : MonoBehaviour
         if (seconds > 0)
         {
             isWaiting = true;
+            aiPlayer.Movement.StopMovement();
             yield return new WaitForSeconds(seconds);
             isWaiting = false;
         }

@@ -1,13 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager Instance { get; private set; }
 
-    [SerializeField] PlayerManager player;
+    [SerializeField] List<PlayerManager> players;
 
     public static readonly string PlayerTag = "Player";
-    public PlayerManager Player => player;
+    public PlayerManager Player 
+    { 
+        get 
+        { 
+            for(int i = 0; i < players.Count; i++)
+            {
+                if (players[i].gameObject.activeInHierarchy == true)
+                    return players[i];
+            }
+
+            return players[0];
+        } 
+    }
+        
 
     private void Awake()
     {

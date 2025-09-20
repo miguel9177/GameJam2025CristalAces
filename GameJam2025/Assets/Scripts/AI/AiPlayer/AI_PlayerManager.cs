@@ -11,6 +11,8 @@ public class AI_PlayerManager : MonoBehaviour
     private bool collidingWithPlayer = false;
     private Coroutine stopCollidingWithPlayerCoroutine = null;
 
+    public AI_PlayerMovement Movement => movement;
+
     #region Initialize
 
     private void Start()

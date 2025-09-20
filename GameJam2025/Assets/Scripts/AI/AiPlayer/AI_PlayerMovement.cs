@@ -27,7 +27,9 @@ public class AI_PlayerMovement : MonoBehaviour
 
     public void StopMovement()
     {
+        rb.isKinematic = true;
         rb.linearVelocity = Vector3.zero;
+        StartCoroutine(HelperFunctionsUtility.IE_WaitForFrames(() => rb.isKinematic = false, 1));
     }
 
     public bool ReachedTarget(float reachDistance)

@@ -11,6 +11,15 @@ public class WheelChairPlayerMovement : PlayerMovementBase
     [SerializeField] private float turnAmount = 0.5f;
     [SerializeField] private AnimationCurve turnCurve;
 
+    [Header("Camera Settings")]
+    [SerializeField] private float mouseSensitivity = 100f;
+    [SerializeField] private float minX = -90f;
+    [SerializeField] private float maxX = 90f;
+    [SerializeField] private float minY = -90f;
+    [SerializeField] private float maxY = 90f;
+
+    private float yawRotation = 0f;
+    private float xRotation = 0f;
     private float lastPushTime = -999f;
     private float rotationInput = 0f;
     private bool isPushing = false;
@@ -25,6 +34,7 @@ public class WheelChairPlayerMovement : PlayerMovementBase
     private void Update()
     {
         HandlePushInput();
+        HandleCameraRotation();
     }
 
     private void FixedUpdate()
@@ -89,6 +99,26 @@ public class WheelChairPlayerMovement : PlayerMovementBase
         }
 
         Rb.MoveRotation(Quaternion.Euler(0f, targetYaw, 0f));
+    }
+
+    #endregion
+
+    #region Camera Rotation
+
+    private void HandleCameraRotation()
+    {
+        Vector2 mouseDelta = InputsManagers.Instance.MouseDelta * mouseSensitivity * Time.deltaTime;
+
+        // controla yaw (horizontal)
+        yawRotation += mouseDelta.x;
+
+        // controla pitch (vertical)
+        xRotation -= mouseDelta.y;
+        xRotation = Mathf.Clamp(xRotation, minX, maxX);
+        yawRotation = Mathf.Clamp(yawRotation, minY, maxY);
+
+        // aplica a rotação completa na câmara
+        Manager.PlayerCamera.transform.localRotation = Quaternion.Euler(xRotation, yawRotation, 0f);
     }
 
     #endregion
