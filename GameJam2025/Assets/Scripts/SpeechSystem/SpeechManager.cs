@@ -39,6 +39,11 @@ public class SpeechManager : MonoBehaviour
 
     private void OnActionKeyPressed()
     {
+        StartCoroutine(HelperFunctionsUtility.IE_WaitForFrames(() => ClickedNewSpeech(), 1));
+    }
+
+    private void ClickedNewSpeech()
+    {
         if (isActive && !cooldownInputs)
         {
             ShowNextLine();
@@ -55,7 +60,7 @@ public class SpeechManager : MonoBehaviour
         speechQueue.Enqueue(speechData);
 
         // se não tem nenhum diálogo ativo, inicia imediatamente
-        if (!isActive)
+        if (!isActive && cooldownInputs == false)
         {
             StartNextSpeech();
         }
@@ -90,6 +95,8 @@ public class SpeechManager : MonoBehaviour
     {
         if (currentLines == null || currentLineIndex >= currentLines.Length)
         {
+            // inicia cooldown
+            StartCoroutine(InputCooldownCoroutine());
             // terminou este SpeechData, vai pro próximo
             StartNextSpeech();
             return;
