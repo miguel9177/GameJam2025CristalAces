@@ -8,6 +8,7 @@ public class AI_CheckpointsController : MonoBehaviour
     [SerializeField] private List<Ai_Checkpoint> ourCheckpoints = new List<Ai_Checkpoint>();
     [SerializeField] private float reachDistance = 0.2f;
     [SerializeField] private bool loop = true;
+    [SerializeField] private bool teleportToStartPos = false;
 
     private int currentIndex = 0;
     private bool isMoving = true;
@@ -39,6 +40,11 @@ public class AI_CheckpointsController : MonoBehaviour
         {
             if (loop)
                 currentIndex = 0;
+            else if(teleportToStartPos)
+            {
+                currentIndex = 0;
+                aiPlayer.TeleportToPosition(ourCheckpoints[0].transform);
+            }
             else
                 isMoving = false;
         }

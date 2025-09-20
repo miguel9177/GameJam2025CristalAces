@@ -41,7 +41,6 @@ public class InputsManagers : MonoBehaviour
         MouseDelta = new Vector2(mouseX, mouseY);
 
         MouseScrollWheelY = Input.mouseScrollDelta.y;
-        Debug.Log("MOUSE WHEEL : " + MouseScrollWheelY);
 
         if (Input.GetKeyDown(KeyCode.E))
         {

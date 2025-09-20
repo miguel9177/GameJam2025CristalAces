@@ -44,10 +44,8 @@ public class AI_PlayerMovement : MonoBehaviour
         Vector3 ourPos = rb.position;
         Vector3 direction = (targetPos - ourPos).normalized;
 
-        // aplicar força para andar em direção ao alvo
-        rb.AddForce(direction * acceleration, ForceMode.Acceleration);
+        rb.AddForce(direction * acceleration * Time.fixedDeltaTime, ForceMode.Acceleration);
 
-        // limitar a velocidade máxima
         Vector3 horizontalVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         if (horizontalVel.magnitude > maxSpeed)
         {
@@ -55,7 +53,6 @@ public class AI_PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
 
-        // rodar suavemente para a direção do movimento real
         if (horizontalVel.sqrMagnitude > 0.01f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(horizontalVel);
