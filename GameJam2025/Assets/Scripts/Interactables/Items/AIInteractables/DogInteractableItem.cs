@@ -5,13 +5,13 @@ public class DogInteractableItem : InteractableItemBase
 {
     [SerializeField] InventoryItemData itemNecessaryToMoveOutDog;
     [SerializeField] AI_PlayerManager dogNpcManager;
-    [SerializeField] Animation animationComponent;
+    [SerializeField] Animator animatorComponent;
 
     protected override void _Start()
     {
         base._Start();
         dogNpcManager.BlockOrUnlockMovement(true);
-        animationComponent.Play("Sit");
+        animatorComponent.SetTrigger("Sit");
     }
 
     public override bool CanInteract()
@@ -29,13 +29,13 @@ public class DogInteractableItem : InteractableItemBase
 
         GameplayManager.Instance.Player.InventoryManager.ConsumeItem(itemNecessaryToMoveOutDog);
         dogNpcManager.BlockOrUnlockMovement(false);
-        animationComponent.Play("Walk");
+        animatorComponent.SetTrigger("Walk");
         StartCoroutine(IE_WaitUntillNoMoreMovement());
     }
 
     private void FinishedDogPuzzle()
     {
-        animationComponent.Play("Sit");
+        animatorComponent.SetTrigger("Sit");
     }
 
     private IEnumerator IE_WaitUntillNoMoreMovement()
