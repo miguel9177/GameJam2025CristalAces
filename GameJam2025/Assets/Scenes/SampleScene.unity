@@ -3412,6 +3412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6968007240850524879, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3463,6 +3467,10 @@ PrefabInstance:
     - target: {fileID: 3212878091646370125, guid: dca86075f6fa78243b9aa0ef3ab1e837, type: 3}
       propertyPath: m_Name
       value: WheelchairPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212878091646370125, guid: dca86075f6fa78243b9aa0ef3ab1e837, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094649525971073293, guid: dca86075f6fa78243b9aa0ef3ab1e837, type: 3}
       propertyPath: m_LocalPosition.x
