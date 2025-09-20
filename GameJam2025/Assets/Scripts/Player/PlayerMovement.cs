@@ -51,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * input.x + transform.forward * input.y;
 
         rb.AddForce(move.normalized * moveSpeed, ForceMode.VelocityChange);
-        Debug.Log(rb.linearVelocity.magnitude);
     }
 
     private void OnSpaceKeyPressed()
