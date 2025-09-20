@@ -2014,7 +2014,7 @@ MonoBehaviour:
   pushForce: 7
   pushCooldown: 0.5
   friction: 1.5
-  turnTime: 0.7
+  turnTime: 0.6
   turnAmount: 25
   turnCurve:
     serializedVersion: 2
