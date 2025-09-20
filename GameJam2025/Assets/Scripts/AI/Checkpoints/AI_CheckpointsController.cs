@@ -40,13 +40,16 @@ public class AI_CheckpointsController : MonoBehaviour
         {
             if (loop)
                 currentIndex = 0;
-            else if(teleportToStartPos)
+            else if (teleportToStartPos)
             {
                 currentIndex = 0;
                 aiPlayer.TeleportToPosition(ourCheckpoints[0].transform);
             }
             else
+            {
                 isMoving = false;
+                aiPlayer.NoMoreTargets();
+            }
         }
     }
 

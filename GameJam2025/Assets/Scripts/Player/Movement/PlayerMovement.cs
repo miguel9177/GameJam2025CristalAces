@@ -53,6 +53,8 @@ public class PlayerMovement : PlayerMovementBase
 
     private void OnSpaceKeyPressed()
     {
+        //NO JUMP
+        return;
         if (isGrounded)
         {
             Rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);

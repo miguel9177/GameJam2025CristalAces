@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -12,6 +13,8 @@ public class AI_PlayerMovement : MonoBehaviour
     private Vector3 targetPosition;
     private bool hasTarget = false;
 
+    public bool HasTarget => hasTarget;
+
     private void Awake()
     {
         rb.freezeRotation = true;
@@ -23,6 +26,11 @@ public class AI_PlayerMovement : MonoBehaviour
         acceleration = moveSpeed;
         hasTarget = true;
         MoveAI();
+    }
+
+    public void NoMoreTargets()
+    {
+        hasTarget = false;
     }
 
     public void StopMovement()

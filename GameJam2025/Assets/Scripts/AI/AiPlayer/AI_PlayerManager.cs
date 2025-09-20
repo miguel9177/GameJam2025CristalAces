@@ -68,6 +68,11 @@ public class AI_PlayerManager : MonoBehaviour
         movement.MoveTo(targetPosition, speed);
     }
 
+    public void NoMoreTargets()
+    {
+        movement.NoMoreTargets();
+    }
+
     public bool ReachedTarget(float reachDistance)
     {
         return movement.ReachedTarget(reachDistance);
