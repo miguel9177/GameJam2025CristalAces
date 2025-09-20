@@ -7,6 +7,7 @@ public class InteractableItemBase : MonoBehaviour
 
     [SerializeField] private Collider myCollider;
     [SerializeField] private LayerMask interactableLayers;
+    [Header("NULLABLE VARIABLES")]
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] private AudioData soundOnInteract;
 
@@ -64,9 +65,6 @@ public class InteractableItemBase : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Verifica se o player está a olhar para este objeto e se pode interagir.
-    /// </summary>
     public virtual bool CanInteract()
     {
         if (!playerInsideTrigger) return false;
@@ -80,6 +78,11 @@ public class InteractableItemBase : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void ForceCallInteract()
+    {
+        Interact();
     }
 
     protected virtual void Interact()
