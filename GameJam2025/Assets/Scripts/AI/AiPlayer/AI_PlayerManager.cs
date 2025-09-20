@@ -9,6 +9,7 @@ public class AI_PlayerManager : MonoBehaviour
     [SerializeField] private List<TriggerLayerDetector> triggersLayerDetector;
     [SerializeField] private float timeToWaitToMoveAgainAfterCollidingWithPlayer = 1f;
     private bool collidingWithPlayer = false;
+    private bool blockMovement = false;
     private Coroutine stopCollidingWithPlayerCoroutine = null;
 
     public AI_PlayerMovement Movement => movement;
@@ -61,7 +62,7 @@ public class AI_PlayerManager : MonoBehaviour
 
     public void MoveTo(Vector3 targetPosition, float speed)
     {
-        if (collidingWithPlayer)
+        if (collidingWithPlayer || blockMovement)
             return;
 
         movement.MoveTo(targetPosition, speed);
@@ -75,6 +76,11 @@ public class AI_PlayerManager : MonoBehaviour
     public void TeleportToPosition(Transform pos)
     {
         this.transform.position = pos.position;
+    }
+
+    public void BlockOrUnlockMovement(bool lockIt)
+    {
+        blockMovement = lockIt;
     }
 
     #endregion

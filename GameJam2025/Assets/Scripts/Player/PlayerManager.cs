@@ -6,12 +6,14 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] PlayerMovementBase playerMovement;
     [SerializeField] Camera playerCamera;
     [SerializeField] PlayerCanvasController playerCanvasController;
+    [SerializeField] PlayerInventoryManager inventoryManager;
 
     [Header("Data")]
     [SerializeField] private Color defaultAimColor;
     [SerializeField] private Color aimingAtInteractableColor;
 
     public Camera PlayerCamera => playerCamera;
+    public PlayerInventoryManager InventoryManager => inventoryManager;
     private InteractableItemBase inteactableItem = null;
 
     private void Update()

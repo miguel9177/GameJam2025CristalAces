@@ -10,10 +10,21 @@ public class InteractableItemBase : MonoBehaviour
 
     private void Start()
     {
-        InputsManagers.Instance.OnActionKeyPressed += TryInteract;
+        _Start();
     }
 
     private void OnDestroy()
+    {
+        _Destroy();
+        
+    }
+
+    protected virtual void _Start()
+    {
+        InputsManagers.Instance.OnActionKeyPressed += TryInteract;
+    }
+
+    protected virtual void _Destroy()
     {
         if (InputsManagers.Instance != null)
             InputsManagers.Instance.OnActionKeyPressed -= TryInteract;
@@ -52,7 +63,7 @@ public class InteractableItemBase : MonoBehaviour
     /// <summary>
     /// Verifica se o player está a olhar para este objeto e se pode interagir.
     /// </summary>
-    public bool CanInteract()
+    public virtual bool CanInteract()
     {
         if (!playerInsideTrigger) return false;
 

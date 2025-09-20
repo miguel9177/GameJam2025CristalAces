@@ -34,7 +34,7 @@ public class AI_PlayerMovement : MonoBehaviour
 
     public bool ReachedTarget(float reachDistance)
     {
-        if (!hasTarget) return true;
+        if (!hasTarget) return false;
         return Vector3.Distance(feet.position, targetPosition) <= reachDistance;
     }
 
