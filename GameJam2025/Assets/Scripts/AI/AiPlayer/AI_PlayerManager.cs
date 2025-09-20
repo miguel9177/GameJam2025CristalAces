@@ -29,6 +29,7 @@ public class AI_PlayerManager : MonoBehaviour
     private void OnEnteredPlayerLayer(Collider collider)
     {
         collidingWithPlayer = true;
+        movement.StopMovement();
     }
 
     private void OnExitPlayerLayer(Collider collider)

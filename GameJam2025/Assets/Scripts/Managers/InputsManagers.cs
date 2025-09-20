@@ -7,6 +7,8 @@ public class InputsManagers : MonoBehaviour
     public Vector2 MoveAxis { get; private set; }
     public Vector2 MouseDelta { get; private set; }
     public float MouseScrollWheelY { get; private set; }
+    public bool OnPressingLeftClickMouse { get; private set; }
+    public bool OnPressingRightClickMouse { get; private set; }
 
     public Action OnActionKeyPressed;
     public Action OnSpaceKeyPressed;
@@ -28,6 +30,8 @@ public class InputsManagers : MonoBehaviour
 
     private void Update()
     {
+        ResetBoolVariables();
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         MoveAxis = new Vector2(x, y);
@@ -51,9 +55,23 @@ public class InputsManagers : MonoBehaviour
         {
             OnMouseLeftClick?.Invoke();
         }
+        if (Input.GetMouseButton(0))
+        {
+            OnPressingLeftClickMouse = true;
+        }
         if (Input.GetMouseButtonDown(1))
         {
             OnMouseRightClick?.Invoke();
         }
+        if(Input.GetMouseButton(1))
+        {
+            OnPressingRightClickMouse = true;
+        }
+    }
+
+    private void ResetBoolVariables()
+    {
+        OnPressingLeftClickMouse = false;
+        OnPressingRightClickMouse = false;
     }
 }

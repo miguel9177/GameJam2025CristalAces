@@ -25,6 +25,11 @@ public class AI_PlayerMovement : MonoBehaviour
         MoveAI();
     }
 
+    public void StopMovement()
+    {
+        rb.linearVelocity = Vector3.zero;
+    }
+
     public bool ReachedTarget(float reachDistance)
     {
         if (!hasTarget) return true;

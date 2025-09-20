@@ -2,10 +2,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PlayerMovementBase
 {
-    [SerializeField] PlayerManager manager;
-    [SerializeField] private Rigidbody rb;
     [SerializeField] private float moveSpeed = 6f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private Transform groundCheck;
@@ -23,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {     
-        rb.freezeRotation = true;
+        Rb.freezeRotation = true;
         initialGravity = gravity;
         InputsManagers.Instance.OnSpaceKeyPressed += OnSpaceKeyPressed;
     }
@@ -50,26 +48,26 @@ public class PlayerMovement : MonoBehaviour
         Vector2 input = InputsManagers.Instance.MoveAxis;
         Vector3 move = transform.right * input.x + transform.forward * input.y;
 
-        rb.AddForce(move.normalized * moveSpeed, ForceMode.VelocityChange);
+        Rb.AddForce(move.normalized * moveSpeed, ForceMode.VelocityChange);
     }
 
     private void OnSpaceKeyPressed()
     {
         if (isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             StartCoroutine(IE_ReduceGravity(timeToDeactivateGravityAfterJump));
         }
     }
 
     private void ClampVelocity()
     {
-        Vector3 horizontalVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        Vector3 horizontalVel = new Vector3(Rb.linearVelocity.x, 0f, Rb.linearVelocity.z);
 
         if (horizontalVel.magnitude > maxVelocity)
         {
             Vector3 limitedVel = horizontalVel.normalized * maxVelocity;
-            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+            Rb.linearVelocity = new Vector3(limitedVel.x, Rb.linearVelocity.y, limitedVel.z);
         }
     }
 
@@ -79,18 +77,18 @@ public class PlayerMovement : MonoBehaviour
         Vector2 mouseDelta = InputsManagers.Instance.MouseDelta * mouseSensitivity * Time.deltaTime;
 
         yRotation += mouseDelta.x;
-        rb.MoveRotation(Quaternion.Euler(0f, yRotation, 0f));
+        Rb.MoveRotation(Quaternion.Euler(0f, yRotation, 0f));
 
         xRotation -= mouseDelta.y;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        manager.PlayerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        Manager.PlayerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 
     private void ApplyGravity()
     {
         if (!isGrounded)
         {
-            rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);
+            Rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);
         }
     }
 
@@ -98,12 +96,18 @@ public class PlayerMovement : MonoBehaviour
 
     #region Modify Forces
 
+    private bool reducingGravity = false;
     private IEnumerator IE_ReduceGravity(float time)
     {
+        if (reducingGravity)
+            yield break;
+
+        reducingGravity = true;
         initialGravity = gravity;
         gravity = 0;
         yield return new WaitForSeconds(time);
         gravity = initialGravity;
+        reducingGravity = false;
     }
 
     #endregion
