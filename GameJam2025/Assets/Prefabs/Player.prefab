@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1050588399050634735}
   manager: {fileID: 6970567534055164363}
-  moveSpeed: 0.5
+  moveSpeed: 200
   jumpForce: 20
   groundCheck: {fileID: 4125737899138775910}
   groundDistance: 0.73

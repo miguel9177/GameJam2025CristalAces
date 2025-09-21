@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1149d98cc85d2cc49bf016b6440b494a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: GameplayWalk
+  sceneToLoad: GameplayWheelChairWalk
   delay: 5
 --- !u!1 &6776441490446297432
 GameObject:

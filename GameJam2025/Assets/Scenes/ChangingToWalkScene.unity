@@ -562,6 +562,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2863904609571825098, guid: 38d4a7f8374a8e143b77fa683c7ce26b, type: 3}
+      propertyPath: sceneToLoad
+      value: GameplayWalk
+      objectReference: {fileID: 0}
     - target: {fileID: 6332761698558032678, guid: 38d4a7f8374a8e143b77fa683c7ce26b, type: 3}
       propertyPath: m_Name
       value: CanvasChangingScene

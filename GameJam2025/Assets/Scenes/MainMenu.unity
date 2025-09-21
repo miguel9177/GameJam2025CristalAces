@@ -946,6 +946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5920627851868742375, guid: f98f3718f76c9ce4ab01cba76a01cff1, type: 3}
+      propertyPath: acceptInputs
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7719318663494948268, guid: f98f3718f76c9ce4ab01cba76a01cff1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
