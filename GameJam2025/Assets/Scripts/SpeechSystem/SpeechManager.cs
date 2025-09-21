@@ -17,7 +17,9 @@ public class SpeechManager : MonoBehaviour
     private string[] currentLines;
     private int currentLineIndex;
     private bool isActive = false;
-    private bool cooldownInputs = false; 
+    private bool cooldownInputs = false;
+
+    public Queue<SpeechData> SpeechQueue => speechQueue;
 
     public bool IsActive => isActive;
     
