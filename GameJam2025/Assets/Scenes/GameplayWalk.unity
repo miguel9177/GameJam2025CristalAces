@@ -13687,10 +13687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutOfBoundsWalls
       objectReference: {fileID: 0}
-    - target: {fileID: 3815037576356254924, guid: dd8dfb23acc05a54bb9e7a97e679d2db, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 73.79
-      objectReference: {fileID: 0}
     - target: {fileID: 5626483708743987091, guid: dd8dfb23acc05a54bb9e7a97e679d2db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
