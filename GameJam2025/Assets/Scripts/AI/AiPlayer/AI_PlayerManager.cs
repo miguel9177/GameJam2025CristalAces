@@ -11,6 +11,9 @@ public class AI_PlayerManager : MonoBehaviour
     [SerializeField] private Vector2 timeToWaitToMoveAgainAfterCollidingWithPlayer = new Vector2(0.8f, 2.5f);
     [SerializeField] private float timeToWaitToStartFirstTrajectory = 0;
     [SerializeField] private string startWithSpecificAnimation = "";
+    [Header("NULLABLE ITEMS")]
+    [SerializeField] private AudioPlayer audioPlayer;
+    [SerializeField] private AudioData audioData;
     private bool collidingWithPlayer = false;
     private bool blockMovement = false;
     private Coroutine stopCollidingWithPlayerCoroutine = null;
@@ -70,6 +73,9 @@ public class AI_PlayerManager : MonoBehaviour
 
         if(movement.HasTarget)
             animatorController?.StartIdleAnimation();
+
+        if(audioPlayer != null && audioData != null)
+            audioPlayer?.PlayAudio(audioData);
 
         collidingWithPlayer = true;
         movement.StopMovement();
