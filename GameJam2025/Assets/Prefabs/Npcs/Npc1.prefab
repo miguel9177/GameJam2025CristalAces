@@ -105,7 +105,8 @@ MonoBehaviour:
   animatorController: {fileID: 435748374606306838}
   triggersLayerDetector:
   - {fileID: 5940471872995881699}
-  timeToWaitToMoveAgainAfterCollidingWithPlayer: 1
+  timeToWaitToMoveAgainAfterCollidingWithPlayer: {x: 0.8, y: 2.5}
+  timeToWaitToStartFirstTrajectory: 0
   startWithSpecificAnimation: 
 --- !u!114 &3080255162481555279
 MonoBehaviour:

@@ -9,6 +9,7 @@ public class AI_PlayerManager : MonoBehaviour
     [SerializeField] private Ai_PlayerAnimatorController animatorController;
     [SerializeField] private List<TriggerLayerDetector> triggersLayerDetector;
     [SerializeField] private Vector2 timeToWaitToMoveAgainAfterCollidingWithPlayer = new Vector2(0.8f, 2.5f);
+    [SerializeField] private float timeToWaitToStartFirstTrajectory = 0;
     [SerializeField] private string startWithSpecificAnimation = "";
     private bool collidingWithPlayer = false;
     private bool blockMovement = false;
@@ -28,6 +29,22 @@ public class AI_PlayerManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(startWithSpecificAnimation) == false)
             animatorController?.StartSpecificAnimation(startWithSpecificAnimation);
+
+        if(timeToWaitToStartFirstTrajectory > 0)
+        {
+            if (stopCollidingWithPlayerCoroutine == null)
+            {
+                collidingWithPlayer = true;
+                float timeToWait = UnityEngine.Random.Range(timeToWaitToMoveAgainAfterCollidingWithPlayer.x, timeToWaitToMoveAgainAfterCollidingWithPlayer.y);
+                movement.ToggleKinematic(true);
+                StartCoroutine(HelperFunctionsUtility.IE_WaitForSeconds(()=>
+                {
+                    movement.ToggleKinematic(false);
+                },timeToWait));
+                stopCollidingWithPlayerCoroutine = StartCoroutine(IE_WaitForSecondsBeforeStoppingCollidingWithPlayer(timeToWait));
+            }
+        }
+
     }
 
     private void OnDestroy()

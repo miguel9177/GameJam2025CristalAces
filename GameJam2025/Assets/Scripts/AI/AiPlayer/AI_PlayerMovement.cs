@@ -40,6 +40,11 @@ public class AI_PlayerMovement : MonoBehaviour
         StartCoroutine(HelperFunctionsUtility.IE_WaitForFrames(() => rb.isKinematic = false, 1));
     }
 
+    public void ToggleKinematic(bool toggle)
+    {
+        rb.isKinematic = toggle;
+    }
+
     public bool ReachedTarget(float reachDistance)
     {
         if (!hasTarget) return false;

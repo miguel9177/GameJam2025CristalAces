@@ -508,6 +508,92 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4653291749581582674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &166006185607961212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6342449877797377199}
+  - component: {fileID: 1105991427560559418}
+  - component: {fileID: 819687766431043585}
+  m_Layer: 7
+  m_Name: HighlightInteractable (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6342449877797377199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166006185607961212}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.5606862, z: -0, w: 0.8280284}
+  m_LocalPosition: {x: 0, y: -0.3345, z: 0}
+  m_LocalScale: {x: 1, y: 0.27949283, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8173609175912388856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1105991427560559418
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166006185607961212}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &819687766431043585
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166006185607961212}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 23e25ed0aed042b40a36a7d3f5747af2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &168355675161431797
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,6 +5095,7 @@ Transform:
   - {fileID: 1936656281890155207}
   - {fileID: 1375640389740286659}
   - {fileID: 8553469726294644281}
+  - {fileID: 6342449877797377199}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1939988990524074233
@@ -5077,6 +5164,7 @@ MonoBehaviour:
     m_Bits: 128
   audioPlayer: {fileID: 3204881317611685017}
   soundOnInteract: {fileID: 11400000, guid: 3d1cf6d57160f294f947e7b7ac7ee225, type: 2}
+  speechData: {fileID: 0}
   itemNecessaryToMoveOutDog: {fileID: 11400000, guid: 763569056aca1cf4fad5c13891f97a5d, type: 2}
   dogNpcManager: {fileID: 4094883620081791782}
   animatorComponent: {fileID: 5694023912931122594}
@@ -5095,7 +5183,8 @@ MonoBehaviour:
   movement: {fileID: 7898638864083715059}
   animatorController: {fileID: 0}
   triggersLayerDetector: []
-  timeToWaitToMoveAgainAfterCollidingWithPlayer: 1
+  timeToWaitToMoveAgainAfterCollidingWithPlayer: {x: 0.8, y: 2.5}
+  timeToWaitToStartFirstTrajectory: 0
   startWithSpecificAnimation: 
 --- !u!114 &7898638864083715059
 MonoBehaviour:
@@ -21849,8 +21938,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5505762, y: 1.3876768, z: 1.2240858}
-  m_Center: {x: -0.009943008, y: 0.24585092, z: 0.0156030655}
+  m_Size: {x: 0.5505762, y: 1.3876768, z: 1.7925485}
+  m_Center: {x: -0.009943008, y: 0.24585164, z: 0.004358172}
 --- !u!1 &5824051915924892009
 GameObject:
   m_ObjectHideFlags: 0

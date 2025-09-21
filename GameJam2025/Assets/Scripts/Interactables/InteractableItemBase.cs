@@ -10,6 +10,7 @@ public class InteractableItemBase : MonoBehaviour
     [Header("NULLABLE VARIABLES")]
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] private AudioData soundOnInteract;
+    [SerializeField] private SpeechData speechData;
 
     public bool PlayerInsideTrigger => playerInsideTrigger;
 
@@ -89,6 +90,9 @@ public class InteractableItemBase : MonoBehaviour
     {
         if (audioPlayer != null && soundOnInteract)
             audioPlayer.PlayAudio(soundOnInteract);
+        if(speechData != null && GameplayManager.Instance.Player.SpeechManager.IsActive == false)
+            GameplayManager.Instance.Player.SpeechManager.StartSpeech(speechData);
+
         Debug.Log($"{gameObject.name} foi interagido!");
     }
 }

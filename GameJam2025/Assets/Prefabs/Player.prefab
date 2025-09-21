@@ -421,13 +421,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5442175766518869344}
     - target: {fileID: 5241503779636032200, guid: 67423e7d9cacd69449996d84dfba2426, type: 3}
-      propertyPath: allQuests.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5241503779636032200, guid: 67423e7d9cacd69449996d84dfba2426, type: 3}
       propertyPath: 'allQuests.Array.data[0]'
       value: 
-      objectReference: {fileID: 9076847577190132208}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241503779636032200, guid: 67423e7d9cacd69449996d84dfba2426, type: 3}
+      propertyPath: 'allQuests.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 469665464521350848, guid: 67423e7d9cacd69449996d84dfba2426, type: 3}
@@ -439,17 +439,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2758105313419426170, guid: 67423e7d9cacd69449996d84dfba2426, type: 3}
   m_PrefabInstance: {fileID: 1803676538575309858}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9076847577190132208 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7273456913825965522, guid: 67423e7d9cacd69449996d84dfba2426, type: 3}
-  m_PrefabInstance: {fileID: 1803676538575309858}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 273e4172b46f6eb458537ec2ccbe09e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1860941738849278396
 PrefabInstance:
   m_ObjectHideFlags: 0

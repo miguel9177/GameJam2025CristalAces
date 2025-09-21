@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cce1317e46eaa43408ddd0b9d2ee1639, type: 3}
-  m_Name: DogSeemsHungry
+  m_Name: HeresYourHotDogThanks
   m_EditorClassIdentifier: 
   lines:
-  - "Este c\xE3o parece ter fome."
+  - Aqui esta o teu HotDog. Obrigado
   icon: {fileID: 21300000, guid: e7fddea131a3f634697a828e2bd73ad3, type: 3}

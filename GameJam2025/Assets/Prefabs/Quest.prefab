@@ -95,8 +95,10 @@ MonoBehaviour:
   parentOfQuestUI: {fileID: 0}
   txtText: {fileID: 0}
   allQuests:
-  - {fileID: 6990807061739112486}
-  - {fileID: 6579189308158976838}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4660641024032845521
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a56e1d519a83647bf211f8133810bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questText: Reach the metro
+  questText: Vai para o Metro
