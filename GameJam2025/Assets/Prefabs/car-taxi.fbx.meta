@@ -3,7 +3,42 @@ guid: efb353c8048f6724b91e655dcfcedf6a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 17 GREY-DARKEST
+    second: {fileID: 2100000, guid: f5d3dcb913458c74aa5494926094ddaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 20 GREY
+    second: {fileID: 2100000, guid: 81a95ecda21681140b8c20e77192f291, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 26 RED-DARK
+    second: {fileID: 2100000, guid: 57c7c3c0582c9d947a538f0f794a2e0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 30 YELLOW
+    second: {fileID: 2100000, guid: 0718d82a71291da45a1a2cc8106433c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 57 BLACK
+    second: {fileID: 2100000, guid: 98a7ec3b3e45fb44fa2d2b1387806cdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 58 WHITE
+    second: {fileID: 2100000, guid: 110f032378f2a5d4298deca86bf70f96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 64 GLASS
+    second: {fileID: 2100000, guid: 08f17d502dcfba440a1ce27e0cd46116, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

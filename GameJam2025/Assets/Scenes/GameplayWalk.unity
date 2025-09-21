@@ -301,6 +301,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -688,6 +696,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea3b234f7591449b69854b909a04c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &78376363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78376364}
+  - component: {fileID: 78376365}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78376364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78376363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.34859723, y: -0.5814101, z: -0.38722056, w: 0.62490195}
+  m_LocalPosition: {x: 20.93621, y: 4.12, z: -24.8}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: -0.836, y: -85.36, z: -62.798}
+--- !u!65 &78376365
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78376363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &79691780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1271,6 +1332,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 0
   speed: 25000
+--- !u!1 &162541494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 162541495}
+  - component: {fileID: 162541496}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &162541495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162541494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.382252, y: -0.6166171, z: 0.35403863, w: -0.5901894}
+  m_LocalPosition: {x: 20.93621, y: 4.44, z: -31.728}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: -0.836, y: -266.98102, z: -62.798}
+--- !u!65 &162541496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162541494}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &168850798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1483,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1426,6 +1548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1991,6 +2117,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2272,6 +2406,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 98abd6506911d1c4ca996389892cebb8, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2504,6 +2646,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 0
   speed: 350
+--- !u!1 &360840181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360840182}
+  - component: {fileID: 360840183}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &360840182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360840181}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.3763279, y: 0.63700795, z: 0.34219193, w: -0.5792262}
+  m_LocalPosition: {x: 57.956, y: -0.65, z: 23.568}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: 0, y: 264.56, z: -61.147}
+--- !u!65 &360840183
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360840181}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &365611412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,6 +3441,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 98abd6506911d1c4ca996389892cebb8, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3596,6 +3799,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 98abd6506911d1c4ca996389892cebb8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3669,6 +3880,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5361,6 +5580,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &901953548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901953549}
+  - component: {fileID: 901953550}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901953549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901953548}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.37286574, y: 0.6009835, z: -0.36390743, w: 0.60610354}
+  m_LocalPosition: {x: -33.82, y: 0.041, z: 8.445}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: -0.836, y: 90.024, z: -62.798}
+--- !u!65 &901953550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901953548}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &904395893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,6 +5731,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5660,6 +5940,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 98abd6506911d1c4ca996389892cebb8, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 98abd6506911d1c4ca996389892cebb8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5840,6 +6128,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6301,6 +6597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6887,6 +7191,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1356681624}
+  - {fileID: 360840182}
+  - {fileID: 2147186607}
+  - {fileID: 1600541738}
+  - {fileID: 901953549}
+  - {fileID: 1494758152}
+  - {fileID: 162541495}
+  - {fileID: 78376364}
   - {fileID: 566979553}
   - {fileID: 508852775}
   - {fileID: 1507052226}
@@ -8280,6 +8592,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea3b234f7591449b69854b909a04c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1356681623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356681624}
+  - component: {fileID: 1356681625}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356681624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356681623}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.35966572, y: 0.6088026, z: -0.35966572, w: 0.6088026}
+  m_LocalPosition: {x: 57.2643, y: -0.65, z: 9.47}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -61.147}
+--- !u!65 &1356681625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356681623}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1364852559
 GameObject:
   m_ObjectHideFlags: 0
@@ -8541,7 +8906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69486895798900523, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.15
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 69486895798900523, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8579,6 +8944,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 98abd6506911d1c4ca996389892cebb8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8974,6 +9347,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea3b234f7591449b69854b909a04c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1494758151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494758152}
+  - component: {fileID: 1494758153}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1494758152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494758151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.36398596, y: -0.60622954, z: -0.37279224, w: 0.6008544}
+  m_LocalPosition: {x: -33.82, y: 0.041, z: 15.542}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: -0.836, y: -90, z: -62.798}
+--- !u!65 &1494758153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494758151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1495326944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9026,6 +9452,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9099,6 +9533,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38540a08f0e267a4db94fbd4a30e1f0f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9532,7 +9974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69486895798900523, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.15
+      value: 3.54
       objectReference: {fileID: 0}
     - target: {fileID: 69486895798900523, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9570,6 +10012,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9643,6 +10093,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9824,11 +10282,72 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+--- !u!1 &1600541737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600541738}
+  - component: {fileID: 1600541739}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600541738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600541737}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.031152437, y: 0.018404078, z: -0.50831085, w: 0.86041325}
+  m_LocalPosition: {x: 8.4, y: -1.74, z: 63.46}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: 4.147, y: 0, z: -61.147}
+--- !u!65 &1600541739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600541737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1620277218
 GameObject:
   m_ObjectHideFlags: 0
@@ -11059,6 +11578,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11155,6 +11682,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12014,6 +12549,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5bdff17f56620f468eb921ec0a0ed60, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12445,6 +12988,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13100,6 +13651,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NpcCar
       objectReference: {fileID: 0}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
+    - target: {fileID: 3143723513448053573, guid: fd051e94a6d51c744b926ef67d438d74, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10f23a8ef29d1c141809c2e9fff9d186, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13240,6 +13799,59 @@ MonoBehaviour:
   reachDistance: 1.5
   loop: 0
   teleportToStartPos: 0
+--- !u!1 &2147186606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147186607}
+  - component: {fileID: 2147186608}
+  m_Layer: 0
+  m_Name: traficSignsRamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2147186607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147186606}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.50826573, y: 0.8603375, z: 0.033182833, w: 0.01960356}
+  m_LocalPosition: {x: -0.04, y: -1.68, z: 63.46}
+  m_LocalScale: {x: 1, y: 3.261197, z: 4.4107113}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061629161}
+  m_LocalEulerAnglesHint: {x: -4.418, y: 180, z: -61.147}
+--- !u!65 &2147186608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147186606}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &403149347939738400
 PrefabInstance:
   m_ObjectHideFlags: 0
