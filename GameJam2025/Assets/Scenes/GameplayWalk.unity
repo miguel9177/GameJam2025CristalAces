@@ -826,53 +826,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea3b234f7591449b69854b909a04c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &91276712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 91276713}
-  - component: {fileID: 91276714}
-  m_Layer: 3
-  m_Name: QuestReachedDog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &91276713
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91276712}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.016139299, z: -0, w: 0.9998698}
-  m_LocalPosition: {x: -27.436106, y: -1.75, z: 54.062054}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1049704832}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &91276714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91276712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05cc91516e2a0f2458eb2539b88faad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questText: "Encontra uma forma de tirar o c\xE3o do caminho. Secalhar a banca de
-    cachorros atras, pode me ajudar"
-  hotDog: {fileID: 11400000, guid: 763569056aca1cf4fad5c13891f97a5d, type: 2}
 --- !u!1 &92503452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,51 +4359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 0
   speed: 350
---- !u!1 &594526505
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 594526506}
-  - component: {fileID: 594526507}
-  m_Layer: 3
-  m_Name: QuestMoveTheDogOutOfTheDog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &594526506
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594526505}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.016139299, z: -0, w: 0.9998698}
-  m_LocalPosition: {x: -27.436106, y: -1.75, z: 54.062054}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1049704832}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &594526507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594526505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 273e4172b46f6eb458537ec2ccbe09e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questText: "Secalhar o c\xE3o iria gostar do HotDog"
 --- !u!1 &610928515
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,51 +6244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 0
   speed: 25000
---- !u!1 &982276224
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 982276225}
-  - component: {fileID: 982276226}
-  m_Layer: 3
-  m_Name: QuestReachMetro1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &982276225
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982276224}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.016139299, z: -0, w: 0.9998698}
-  m_LocalPosition: {x: -27.436106, y: -1.75, z: 54.062054}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1049704832}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &982276226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982276224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4f89daa0282b34da046dada094cddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questText: Vai para o Metro
 --- !u!1 &986569141
 GameObject:
   m_ObjectHideFlags: 0
@@ -14476,21 +14339,29 @@ PrefabInstance:
       value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 5889157639646904042, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
+      propertyPath: allQuests.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889157639646904042, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
       propertyPath: 'allQuests.Array.data[0]'
       value: 
-      objectReference: {fileID: 982276226}
+      objectReference: {fileID: 813993950}
     - target: {fileID: 5889157639646904042, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
       propertyPath: 'allQuests.Array.data[1]'
       value: 
-      objectReference: {fileID: 91276714}
+      objectReference: {fileID: 0}
     - target: {fileID: 5889157639646904042, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
       propertyPath: 'allQuests.Array.data[2]'
       value: 
-      objectReference: {fileID: 594526507}
+      objectReference: {fileID: 0}
     - target: {fileID: 5889157639646904042, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
       propertyPath: 'allQuests.Array.data[3]'
       value: 
       objectReference: {fileID: 813993950}
+    - target: {fileID: 6087211923170023080, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25.58667
+      objectReference: {fileID: 0}
     - target: {fileID: 6968007240850524879, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -14503,15 +14374,6 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6461009669961540339, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4557977529835042136, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 982276225}
-    - targetCorrespondingSourceObject: {fileID: 4557977529835042136, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 91276713}
-    - targetCorrespondingSourceObject: {fileID: 4557977529835042136, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 594526506}
     - targetCorrespondingSourceObject: {fileID: 4557977529835042136, guid: 8cbef59113b9f794688ae4ca7383692b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 813993949}
