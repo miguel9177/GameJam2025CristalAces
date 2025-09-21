@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: IShouldUseCrosswalks
   m_EditorClassIdentifier: 
   lines:
-  - "N\xE3o devo ir pela estrada\u2026 deve haver sinais de ced\xEAncia de passagem
-    aqui perto."
+  - "N\xE3o devo ir pela estrada\u2026 deve procurar uma passadeira."
   icon: {fileID: 21300000, guid: 35aea3f9040789f4a83907ceef73e08c, type: 3}

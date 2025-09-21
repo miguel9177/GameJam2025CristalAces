@@ -243,6 +243,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  holdTurnSpeed: 45
   mouseSensitivity: 100
   minX: -90
   maxX: 90
@@ -505,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273e4172b46f6eb458537ec2ccbe09e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questText: "Secalhar o c\xE3o iria gostar do HotDog"
+  questText: "Se calhar o c\xE3o iria gostar do HotDog"
 --- !u!1001 &2260341495706764381
 PrefabInstance:
   m_ObjectHideFlags: 0
