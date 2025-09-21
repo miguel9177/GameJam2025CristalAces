@@ -6,6 +6,7 @@ using UnityEngine;
 public class AIInteractablePauseTrafic : InteractableItemBase
 {
     [SerializeField] List<Collider> collidersToDeactivate;
+    [SerializeField] List<GameObject> gameObjectsToActivate;
     [SerializeField] TriggerLayerDetector triggerLayerDetector;
     [SerializeField] private List<Ai_Checkpoint> checkPointToPause;
     [SerializeField] private float timeToWait;
@@ -43,6 +44,8 @@ public class AIInteractablePauseTrafic : InteractableItemBase
         {
             collidersToDeactivate[i].gameObject.SetActive(false);
         }
+        for (int i = 0; i < gameObjectsToActivate.Count; i++)
+            gameObjectsToActivate[i].gameObject.SetActive(true);
 
         StartCoroutine(IE_WaitForSeconds());
     }
@@ -61,6 +64,8 @@ public class AIInteractablePauseTrafic : InteractableItemBase
             {
                 collidersToDeactivate[i].gameObject.SetActive(true);
             }
+            for (int i = 0; i < gameObjectsToActivate.Count; i++)
+                gameObjectsToActivate[i].gameObject.SetActive(false);
         }
     }
 
@@ -73,6 +78,8 @@ public class AIInteractablePauseTrafic : InteractableItemBase
         {
             collidersToDeactivate[i].gameObject.SetActive(false);
         }
+        for (int i = 0; i < gameObjectsToActivate.Count; i++)
+            gameObjectsToActivate[i].gameObject.SetActive(true);
     }
 
     private void OnExit(Collider collider)
@@ -82,6 +89,8 @@ public class AIInteractablePauseTrafic : InteractableItemBase
         {
             collidersToDeactivate[i].gameObject.SetActive(true);
         }
+        for (int i = 0; i < gameObjectsToActivate.Count; i++)
+            gameObjectsToActivate[i].gameObject.SetActive(false);
     }
 
     #endregion
