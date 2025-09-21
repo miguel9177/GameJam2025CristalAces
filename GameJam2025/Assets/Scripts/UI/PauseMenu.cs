@@ -11,13 +11,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button nextButton;
     [SerializeField] private Button prevButton;
     [SerializeField] private List<GameObject> pages = new List<GameObject>();
+    [SerializeField] private bool acceptInputs = true;
 
     private int currentIndex = 0;
     private bool isPaused = false;
 
     private void Start()
     {
-        InputsManagers.Instance.OnEscapeClick += OnEscapeClick;
+        if(acceptInputs)
+            InputsManagers.Instance.OnEscapeClick += OnEscapeClick;
         closeButton.onClick.AddListener(CloseMenu);
         nextButton.onClick.AddListener(NextPage);
         prevButton.onClick.AddListener(PreviousPage);
@@ -28,7 +30,8 @@ public class PauseMenu : MonoBehaviour
 
     private void OnDestroy()
     {
-        InputsManagers.Instance.OnEscapeClick -= OnEscapeClick;
+        if(acceptInputs)
+            InputsManagers.Instance.OnEscapeClick -= OnEscapeClick;
     }
 
     private void OnEscapeClick()
@@ -36,14 +39,17 @@ public class PauseMenu : MonoBehaviour
         OpenMenu();
     }
 
-    private void OpenMenu()
+    public void OpenMenu()
     {
         isPaused = true;
         Time.timeScale = 0f;
         canvasParent.SetActive(true);
 
-        Cursor.lockState = CursorLockMode.None; // trava o cursor no centro
-        Cursor.visible = true;
+        if(acceptInputs)
+        {
+            Cursor.lockState = CursorLockMode.None; // trava o cursor no centro
+            Cursor.visible = true;
+        }
 
         currentIndex = 0;
         ShowPage(currentIndex);
@@ -55,8 +61,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         canvasParent.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked; // trava o cursor no centro
-        Cursor.visible = false;
+        if(acceptInputs)
+        {
+            Cursor.lockState = CursorLockMode.Locked; // trava o cursor no centro
+            Cursor.visible = false;
+        }
 
         DeactivateAllPages();
     }
