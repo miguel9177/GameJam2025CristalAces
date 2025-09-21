@@ -48,7 +48,7 @@ public class PlayerMovement : PlayerMovementBase
         Vector2 input = InputsManagers.Instance.MoveAxis;
         Vector3 move = transform.right * input.x + transform.forward * input.y;
 
-        Rb.AddForce(move.normalized * moveSpeed, ForceMode.VelocityChange);
+        Rb.AddForce(move.normalized * moveSpeed * Time.deltaTime, ForceMode.VelocityChange);
     }
 
     private void OnSpaceKeyPressed()

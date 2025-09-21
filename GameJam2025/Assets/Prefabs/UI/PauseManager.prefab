@@ -59,7 +59,7 @@ MonoBehaviour:
   - {fileID: 1182607057157068409}
   - {fileID: 4465283888212513133}
   - {fileID: 9135094258983269006}
-  acceptInputs: 0
+  acceptInputs: 1
 --- !u!1001 &6566810082606927271
 PrefabInstance:
   m_ObjectHideFlags: 0
