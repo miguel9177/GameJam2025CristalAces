@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: ICantUseStairs
   m_EditorClassIdentifier: 
   lines:
-  - "N\xE3o consigo usar as escadas de cadeira de rodas... Preciso encontrar outro
-    caminho"
+  - "N\xE3o consigo usar as escadas... Preciso encontrar outro caminho"
   icon: {fileID: 21300000, guid: 35aea3f9040789f4a83907ceef73e08c, type: 3}
