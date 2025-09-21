@@ -8,7 +8,7 @@ public class AI_PlayerManager : MonoBehaviour
     [SerializeField] private AI_PlayerMovement movement;
     [SerializeField] private Ai_PlayerAnimatorController animatorController;
     [SerializeField] private List<TriggerLayerDetector> triggersLayerDetector;
-    [SerializeField] private float timeToWaitToMoveAgainAfterCollidingWithPlayer = 1f;
+    [SerializeField] private Vector2 timeToWaitToMoveAgainAfterCollidingWithPlayer = new Vector2(0.8f, 2.5f);
     [SerializeField] private string startWithSpecificAnimation = "";
     private bool collidingWithPlayer = false;
     private bool blockMovement = false;
@@ -62,7 +62,7 @@ public class AI_PlayerManager : MonoBehaviour
     private void OnExitPlayerLayer(Collider collider)
     {
         if(stopCollidingWithPlayerCoroutine == null)
-            stopCollidingWithPlayerCoroutine = StartCoroutine(IE_WaitForSecondsBeforeStoppingCollidingWithPlayer(timeToWaitToMoveAgainAfterCollidingWithPlayer));
+            stopCollidingWithPlayerCoroutine = StartCoroutine(IE_WaitForSecondsBeforeStoppingCollidingWithPlayer(UnityEngine.Random.Range(timeToWaitToMoveAgainAfterCollidingWithPlayer.x, timeToWaitToMoveAgainAfterCollidingWithPlayer.y)));
     }
 
     #endregion

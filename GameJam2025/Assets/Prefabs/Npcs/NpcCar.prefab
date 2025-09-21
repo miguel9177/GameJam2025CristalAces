@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fede58836ef392645aa135dbfa39613e, type: 2}
+  - {fileID: 2100000, guid: 8b7d82d51a8930e48bc7c464f18a9af4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,7 +101,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2166971453421431521}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6260d412c19c6e344812acb0ee44930d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -155,10 +155,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 3080255162481555279}
+  animatorController: {fileID: 0}
   triggersLayerDetector:
   - {fileID: 2075713415482748080}
   - {fileID: 5940471872995881699}
-  timeToWaitToMoveAgainAfterCollidingWithPlayer: 1
+  timeToWaitToMoveAgainAfterCollidingWithPlayer: {x: 0.8, y: 2.4}
+  startWithSpecificAnimation: 
 --- !u!114 &3080255162481555279
 MonoBehaviour:
   m_ObjectHideFlags: 0
