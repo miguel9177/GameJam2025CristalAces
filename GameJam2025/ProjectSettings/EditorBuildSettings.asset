@@ -13,10 +13,13 @@ EditorBuildSettings:
     guid: 60f638aaa146e074392f3427d60b7399
   - enabled: 1
     path: Assets/Scenes/GameplayWalk.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    guid: be2bf6bb2af0d5f4484ad4c371c1bcb0
   - enabled: 1
     path: Assets/Scenes/ChangingToWheelChairScene.unity
     guid: 8231f72ac9cf3d34687eab79e4319a9b
+  - enabled: 1
+    path: Assets/Scenes/GameplayWheelChairWalk.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
