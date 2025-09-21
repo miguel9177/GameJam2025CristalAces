@@ -1,13 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AIInteractablePauseTrafic : InteractableItemBase
 {
+    [SerializeField] List<Collider> collidersToDeactivate;
+    [SerializeField] TriggerLayerDetector triggerLayerDetector;
     [SerializeField] private List<Ai_Checkpoint> checkPointToPause;
     [SerializeField] private float timeToWait;
 
     private bool interacting = false;
+    private bool playerInsideCrossroad = false;
+
+    protected override void _Start()
+    {
+        base._Start();
+        triggerLayerDetector.OnEnter += OnEnter;
+        triggerLayerDetector.OnExit += OnExit;
+    }
+
+    protected override void _Destroy()
+    {
+        base._Destroy();
+        triggerLayerDetector.OnEnter -= OnEnter;
+        triggerLayerDetector.OnExit -= OnExit;
+    }
 
     protected override void Interact()
     {
@@ -21,6 +39,11 @@ public class AIInteractablePauseTrafic : InteractableItemBase
         for(int i = 0; i < checkPointToPause.Count; i++)
             checkPointToPause[i].ChangeWaitTime(timeToWait);
 
+        for (int i = 0; i < collidersToDeactivate.Count; i++)
+        {
+            collidersToDeactivate[i].gameObject.SetActive(false);
+        }
+
         StartCoroutine(IE_WaitForSeconds());
     }
 
@@ -32,5 +55,34 @@ public class AIInteractablePauseTrafic : InteractableItemBase
             checkPointToPause[i].ResetWaitTime();
 
         interacting = false;
+        if(playerInsideCrossroad == false)
+        {
+            for (int i = 0; i < collidersToDeactivate.Count; i++)
+            {
+                collidersToDeactivate[i].gameObject.SetActive(true);
+            }
+        }
     }
+
+    #region Event Dependent Functions
+
+    private void OnEnter(Collider collider)
+    {
+        playerInsideCrossroad = true;
+        for(int i = 0; i < collidersToDeactivate.Count; i++)
+        {
+            collidersToDeactivate[i].gameObject.SetActive(false);
+        }
+    }
+
+    private void OnExit(Collider collider)
+    {
+        playerInsideCrossroad = false;
+        for (int i = 0; i < collidersToDeactivate.Count; i++)
+        {
+            collidersToDeactivate[i].gameObject.SetActive(true);
+        }
+    }
+
+    #endregion
 }

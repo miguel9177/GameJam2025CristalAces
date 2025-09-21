@@ -6,6 +6,7 @@ public class GameplayManager : MonoBehaviour
     public static GameplayManager Instance { get; private set; }
 
     [SerializeField] List<PlayerManager> players;
+    [SerializeField] AudioManager audioManager;
 
     public static readonly string PlayerTag = "Player";
     public PlayerManager Player 
@@ -21,6 +22,7 @@ public class GameplayManager : MonoBehaviour
             return players[0];
         } 
     }
+    public AudioManager AudioManager => audioManager;
         
 
     private void Awake()

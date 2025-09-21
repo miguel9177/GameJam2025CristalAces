@@ -14,6 +14,7 @@ public class InputsManagers : MonoBehaviour
     public Action OnSpaceKeyPressed;
     public Action OnMouseLeftClick;
     public Action OnMouseRightClick;
+    public Action OnEscapeClick;
 
     private void Awake()
     {
@@ -49,6 +50,10 @@ public class InputsManagers : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             OnSpaceKeyPressed?.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnEscapeClick?.Invoke();
         }
         if (Input.GetMouseButtonDown(0))
         {
