@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - "Este c\xE3o parece ter fome."
-  icon: {fileID: 21300000, guid: e7fddea131a3f634697a828e2bd73ad3, type: 3}
+  icon: {fileID: 21300000, guid: 118f39f2a3cd9bf42922f4411ef3621a, type: 3}
