@@ -26,6 +26,9 @@ public class PauseMenu : MonoBehaviour
 
         canvasParent.SetActive(false);
         DeactivateAllPages();
+
+        Cursor.lockState = CursorLockMode.None; // trava o cursor no centro
+        Cursor.visible = true;
     }
 
     private void OnDestroy()

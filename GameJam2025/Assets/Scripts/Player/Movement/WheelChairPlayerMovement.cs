@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class WheelChairPlayerMovement : PlayerMovementBase
@@ -10,6 +11,8 @@ public class WheelChairPlayerMovement : PlayerMovementBase
     [SerializeField] private float turnTime = 0.5f;
     [SerializeField] private float turnAmount = 0.5f;
     [SerializeField] private AnimationCurve turnCurve;
+    [SerializeField] private float holdTurnSpeed = 45f; // graus por segundo
+
 
     [Header("Camera Settings")]
     [SerializeField] private float mouseSensitivity = 100f;
@@ -35,6 +38,25 @@ public class WheelChairPlayerMovement : PlayerMovementBase
     {
         HandlePushInput();
         HandleCameraRotation();
+        if(isPushing == false)
+            HandleHoldTurn();
+    }
+
+    private void HandleHoldTurn()
+    {
+        if (InputsManagers.Instance.OnPressingRightClickMouse)
+        {
+            float yawDelta = holdTurnSpeed * Time.deltaTime;
+            Quaternion deltaRotation = Quaternion.Euler(0f, yawDelta, 0f);
+            Rb.MoveRotation(Rb.rotation * deltaRotation);
+        }
+
+        if (InputsManagers.Instance.OnPressingLeftClickMouse)
+        {
+            float yawDelta = -holdTurnSpeed * Time.deltaTime;
+            Quaternion deltaRotation = Quaternion.Euler(0f, yawDelta, 0f);
+            Rb.MoveRotation(Rb.rotation * deltaRotation);
+        }
     }
 
     private void FixedUpdate()

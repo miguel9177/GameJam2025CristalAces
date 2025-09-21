@@ -304,6 +304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2863904609571825098, guid: 38d4a7f8374a8e143b77fa683c7ce26b, type: 3}
+      propertyPath: delay
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3522925182750531547, guid: 38d4a7f8374a8e143b77fa683c7ce26b, type: 3}
       propertyPath: m_text
       value: 'Depois do acidente, tudo mudou.
