@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4892e7bf583ca134981a0632d4c2507a, type: 3}
   m_Name: DogBark
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 50a7ffde902ff814ca31b263eaf0844f, type: 3}
+  clip: {fileID: 8300000, guid: 7d315a2e7a0a30140b4c5eb90d8713bb, type: 3}
   volume: 1
-  cooldown: 1.5
+  cooldown: 8.5
